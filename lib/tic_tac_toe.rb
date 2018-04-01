@@ -85,7 +85,7 @@ def turn(board)
     display_board(board)
   else
       turn(board)
-  end
+  
 end
 
 # #won? accepts a board as an argument and tests for whether or not the game has been won. If there is a win, it returns the winning character location indices. If no win has occured, it returns false/nil.
