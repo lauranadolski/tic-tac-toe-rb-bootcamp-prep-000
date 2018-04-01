@@ -84,7 +84,7 @@ def turn(board)
     move(board, index, letter)
     display_board(board)
   else
-    until over?(board)
+    until valid_move?(board, index)
       turn(board)
   end
 end
