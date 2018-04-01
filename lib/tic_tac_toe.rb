@@ -142,7 +142,7 @@ def winner(board)
   end
 end
 
-# #play 
+# #play accepts a board as an argument and is responsible for the overall game loop. 
 
 def play(board)
   until over?(board) == true
