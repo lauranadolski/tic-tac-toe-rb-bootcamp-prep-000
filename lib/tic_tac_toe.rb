@@ -142,7 +142,7 @@ def winner(board)
   end
 end
 
-# #play accepts a board as an argument and is responsible for the overall game loop. It 
+# #play accepts a board as an argument and is responsible for the overall game loop. It activates turns while checking whether the game is over or not before ending the turns. When the game is in fact over, it then reports the game outcome.
 
 def play(board)
   until over?(board) == true
