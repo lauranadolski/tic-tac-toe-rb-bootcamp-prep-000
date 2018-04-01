@@ -76,13 +76,16 @@ end
 # #turn implements a full turn. It asks the user where they want to make their move, and if valid, it makes the move and displays the board. Else, it prompts the user for a new position until it receives a valid move.
 
 def turn(board)
-  until valid_move?(board, index)
-    puts "Please enter 1-9:"
-    input = gets.strip
-    index = input_to_index(input)
+  puts "Please enter 1-9:"
+  input = gets.strip
+  index = input_to_index(input)
+  if valid_move?(board, index)
     letter = current_player(board)
     move(board, index, letter)
     display_board(board)
+  else
+    until turn_count(board) == 9
+      turn(board)
   end
 end
 
