@@ -84,7 +84,7 @@ def turn(board)
     move(board, index, letter)
     display_board(board)
   else
-    until turn_count(board) == 9
+    until over?(board)
       turn(board)
   end
 end
